@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宜居时代</title>
+	<link rel="icon" href="imgs/index/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/public.css">
+	<style>
+		.yiju_banner{
+			width: 1366px;
+			height: 600px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.yiju_banner_tu{
+			width: 1366px;
+			height: 600px;
+		}
+		.yiju_banner_tu img{
+			width: 1366px;
+			height: 600px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.yiju_banner_tu img.active{
+			z-index: 9;
+		}
+		.shuzi{
+			width: 27px;
+			height: 156px;
+			position: absolute;
+			top: 352px;
+			left: 104px;
+			/* background-color: pink; */
+			text-align: center;
+			line-height: 28px;
+			color: #4D4D4D;
+			z-index: 99;
+			cursor: pointer;
+		}
+		.shuzi span{
+			font-size: 21px;
+			font-family: "ARIAL";
+		}
+		.biaozhi{
+			width: 30px;
+			height: 30px;
+			/*background: red;*/
+			z-index: 9;
+			position: absolute;
+			opacity: 0;
+		}
+		.biaozhi.active{
+			opacity: 1;
+		}
+		.shuzi_tiao{
+			width: 9px;
+			height: 2px;
+			background-color: #2B6C8C;
+		}
+		.shuzi_tiao2{
+			width: 2px;
+			height: 7px;
+			background-color: #2B6C8C;
+		}
+		.shuzi_tiao3{
+			width: 2px;
+			height: 7px;
+			background-color: #2B6C8C;
+			margin-left: 24px;
+			margin-top: 12px; 
+		}
+		.shuzi_tiao4{
+			width: 9px;
+			height: 2px;
+			background-color: #2B6C8C;
+			margin-left: 17px;
+		}
+		.shuzi span.active{
+			color: #2B6C8C;
+		}
+		.main{
+			width: 1366px;
+			background-color: #fff;
+			margin: 0 auto;
+		}
+		.product{
+			width: 1366px;
+			height: 982px;
+			/* background-color: green; */
+			padding-top: 40px;
+		}
+		.product_top{
+			width: 100%;
+			height: 122px;
+			background-image: url('imgs/index/title1.png');
+		}
+		.product_bottom{
+			width: 1190px;
+			height: 820px;
+			/* background-color: pink; */
+			margin: 0 auto;
+		}
+		.product_item{
+			width: 370px;
+			height: 370px;
+			border: 1px solid #CDCDCD;
+			float: left;
+			margin-right: 40px;
+			margin-top: 40px;
+			position: relative;
+		}
+		.product_item img{
+			width: 368px;
+			height: 368px;
+		}
+		.product_item2{
+			margin-right: 0;
+		}
+		.product_item.active{
+			box-shadow: 0 5px 20px 5px #DEEAF0;
+		}
+		.yiru{
+			display: none;
+			width: 326px;
+			height: 326px;
+			top: 0;
+			left: 0;
+			transition: bottom 1s linear,opacity 1s linear;    /* 1s  匀速 */
+			opacity: 0;
+			position: absolute;
+		}
+		.product_item:hover .yiru{
+			display: block;
+			opacity: 0.9;
+		}
+		.product_item3{
+			margin-right: 0;
+		}
+		.case{
+			width: 100%;
+			height: 521px;
+			/* background-color: green; */
+			padding-top: 40px;
+		}
+		.case_top{
+			width: 100%;
+			height: 122px;
+			background-image: url('imgs/index/title2.png');
+		}
+		.case_bottom{
+			width: 1018px;
+			height: 319px;
+			/* background-color: blue; */
+			margin: 40px auto 0;
+		}
+		.case_bottom_left{
+			width: 484px;
+			height: 319px;
+			position: relative;
+			float: left;
+			overflow: hidden;
+		}
+		.case_tu{
+			width: 454px;
+			height: 274px;
+			background: url('/imgs/index/3.2.png');
+		}
+		.case_pic{
+			width: 458px;
+			height: 278px;
+			box-shadow: 0 3px 30px 3px #D5D4D3;
+			/*border: 2px solid #eee;*/
+			float: left;
+			margin-right: 40px;
+		}
+		.case_tu2{
+			position: absolute;
+			width: 3000px;
+			overflow: hidden;
+			float: left;
+			height: 278px;
+			top: 24px;
+			left: 26px;
+			/*box-shadow: 0 3px 20px 10px #D5D4D3;*/
+		}
+		.case_tu2 img{
+			width: 454px;
+			height: 274px;
+			border: 2px solid #000;
+		}
+		.case_fuhao{
+			width: 38px;
+			height: 38px;
+			position: absolute;
+			bottom: 0;
+			/*right: 83px;*/
+			left: 370px;
+			background-color: #2B6C8C; 
+			border: 2px solid #eee;
+			text-align: center;
+			line-height: 30px;
+			font-size: 20px;
+			color: #fff; 
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 999;
+		}
+		.case_fuhao:hover{
+			background-color: #ddd;
+		}
+		.case_fuhao2{
+			width: 38px;
+			height: 38px;
+			position: absolute;
+			bottom: 0;
+			left: 409px;
+			background-color: #2B6C8C;
+			border: 2px solid #eee;
+			text-align: center;
+			line-height: 30px;
+			font-size: 20px;
+			color: #fff; 
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 999;
+		}
+		.case_fuhao2:hover{
+			background-color: #ddd;
+		}
+		.case_bottom_right{
+			width: 480px;
+			height: 319px;
+			background-color: white;
+			float: right;
+			margin-left: 50px;
+			position: relative; 
+		}
+		.case_dazi{
+			margin-top: 26px;
+			height: 30px;
+		}
+		.case_dazi h1{
+			font-size: 36px;
+			font-family: "SAN FRANCISCO";
+			font-weight: bold;
+			float: left; 
+			color: #000000;
+		}
+		.case_dazi h2{
+			font-size: 30px;
+			font-family: "微软雅黑";
+			float: left;
+			margin-left: 20px; 
+			color: #212121;
+			font-weight: normal;
+		}
+		.case_wenzi{
+			margin-top: 25px;
+			width: 327px;
+		}
+		.case_wenzi p{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			font-weight: lighter;
+			color: #000; 
+		}
+		.case_kuang{
+			width: 74px;
+			height: 25px;
+			position: absolute;
+			top: 115px;
+			right: 0;
+			border-bottom: 1px solid #2B6C8C;
+		}
+		.case_kuang_left{
+			width: 49px;
+			height: 25px;
+			float: left;
+		}
+		.case_kuang_left span{
+			font-size: 10px;
+			font-family: "SAN FRANCISCO";
+			font-weight: bold;
+			color: #2B6C8C;
+			/* float: left; */
+		}
+		.case_kuang_fangkuai{
+			width: 25px;
+			height: 25px;
+			float: right;
+			background-color: #2B6C8C;
+			position: relative;
+		}
+		.case_kuang_shizi{
+			width: 8px;
+			height: 2px;
+			position: absolute;
+			top: 12px;
+			left: 9px;
+			background-color: #fff;
+		}
+		.case_kuang_shizi2{
+			width: 2px;
+			height: 8px;
+			position: absolute;
+			top: 9px;
+			left: 12px;
+			background-color: #fff;
+		}
+		.case_right_bian{
+			width: 455px;
+			height: 1px;
+			margin-left: 1px;
+			margin-top: 16px;
+			background-color: #B2B2B2;
+		}
+		.case_duanluo{
+			margin-top: 19px;
+		}
+		.case_duanluo p{
+			font-size: 14px;
+			font-family: "微软雅黑";
+			font-weight: lighter;
+			color: #000; 
+		}
+		.team{
+			height: 721px;
+			width: 100%;
+			padding-top: 40px;
+			/* background-color: pink; */
+			position: relative;
+		}
+		.team_top{
+			width: 1366px;
+			height: 122px;
+			background-image: url('imgs/index/title3.png');
+		}
+		.team_bottom{
+			background: url('imgs/index/4.1.png');
+			width: 1366px;
+			height: 648px;
+			position: absolute;
+			bottom: 0;
+		}
+		.team_bottom_left{
+			width: 484px;
+			margin-top: 190px;
+			margin-left: 167px;
+			position: relative;
+		}
+		.team_bottom_left h1{
+			font-size: 36px;
+			font-family: "GLLSANS";
+			font-weight: bold;
+			color: #fff; 
+		}
+		.team_bottom_left h2{
+			font-family: "SAN FRANCISCO";
+			font-weight: bold;
+			color: #fff; 
+			position: absolute;
+			font-size: 10px;
+			right: 37px;
+			top: 16px;
+		}
+		.team_bottom_left p{
+			font-size: 18px;
+			font-family: "微软雅黑";
+			font-weight: lighter;
+			color: #fff;
+			padding-top: 30px;
+		}
+		.team_bottom_xia{
+			width:596px;
+			height: 214px;
+			/* background-color: red; */
+			margin-top: 110px;
+			margin-left: 167px;
+		}
+		.team_xia_item{
+			width: 119px;
+			height: 214px;
+			border-top: 3px solid #AEC4D2;
+			margin-right: 40px;
+			float: left;
+		}
+		.team_item_pic{
+			height: 179px;
+			width: 119px;
+			border-bottom: 1px solid #AEC4D2;
+			margin-bottom: 14px;
+		}
+		.team_item_pic img{
+			height: 178px;
+			width: 119px;
+		}
+		.team_item_zi{
+			font-size: 12px;
+			font-family: "ARIAL";
+			font-weight: bold;
+			color: #B2B2B2;
+		}
+		.team_xia_item2{
+			margin-right: 0;
+
+		}
+		.team_xia_item.active{
+			border-top: 3px solid #F5C812;
+		}
+		.team_item3_pic{
+			height: 179px;
+			width: 119px;
+			margin-bottom: 14px;
+		}
+		.team_item3_pic img{
+			height: 178px;
+			width: 119px;
+		}
+		.team_item_zi.active{
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="yiju_header">
+		<div class="header_left">
+			<img src="imgs/index/logo.png" alt="">
+			<div class="header_left_zi">
+				<p>宜居时代</p>
+			</div>
+		</div>
+		<div class="header_right">
+			<div class="header_right_tiao"></div>
+			<div class="header_right_tiao2"></div>
+			<h1><a href="index.html">公司首页</a></h1>
+			<div class="header_right_tiao3"></div>
+			<div class="header_right_tiao4"></div>
+			<a href="livable home.html">公司简介</a>
+			<a href="product.html">产品中心</a>
+			<a href="case show.html">案例展示</a>
+			<a href="team.html">团队介绍</a>
+			<a href="about.html">关于我们</a>
+			<div class="header_right_search">
+				<input type="text">
+				<input type="submit" value="&#xe633;" class="sousuo">
+			</div>
+		</div>
+	</div>
+	<div class="yiju_banner">
+		<div class="yiju_banner_tu">
+			<img src="imgs/index/banner.jpg" alt="" class="active">
+			<img src="imgs/index/banner33.jpg" alt="">
+			<img src="imgs/index/banner44.jpg" alt="">
+			<img src="imgs/index/banner55.jpg" alt="">
+			<img src="imgs/index/banner22.jpg" alt="">
+		</div>
+		<div class="shuzi">
+			<span class="active">
+				<div class="biaozhi active">
+					<div class="shuzi_tiao"></div>
+					<div class="shuzi_tiao2"></div>
+					<div class="shuzi_tiao3"></div>
+					<div class="shuzi_tiao4"></div>
+				</div>
+				1
+			</span>
+			
+			<span>
+				<div class="biaozhi">
+					<div class="shuzi_tiao"></div>
+					<div class="shuzi_tiao2"></div>
+					<div class="shuzi_tiao3"></div>
+					<div class="shuzi_tiao4"></div>
+				</div>
+				2
+			</span>
+			<span>
+				<div class="biaozhi">
+					<div class="shuzi_tiao"></div>
+					<div class="shuzi_tiao2"></div>
+					<div class="shuzi_tiao3"></div>
+					<div class="shuzi_tiao4"></div>
+				</div>
+				3
+			</span>
+			
+			<span>
+				<div class="biaozhi">
+					<div class="shuzi_tiao"></div>
+					<div class="shuzi_tiao2"></div>
+					<div class="shuzi_tiao3"></div>
+					<div class="shuzi_tiao4"></div>
+				</div>
+				4
+			</span>
+			
+			<span>
+				<div class="biaozhi">
+					<div class="shuzi_tiao"></div>
+					<div class="shuzi_tiao2"></div>
+					<div class="shuzi_tiao3"></div>
+					<div class="shuzi_tiao4"></div>
+				</div>
+				5
+			</span>
+		</div>
+	</div>
+	<div class="main">
+		<div class="product">
+			<div class="product_top"></div>
+			<div class="product_bottom">
+				<div class="product_item">
+					<img src="imgs/index/2.1.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+				<div class="product_item">
+					<img src="imgs/index/2.2.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+				<div class="product_item product_item2 active">
+					<img src="imgs/index/2.3.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+				<div class="product_item">
+					<img src="imgs/index/2.4.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+				<div class="product_item">
+					<img src="imgs/index/2.5.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+				<div class="product_item product_item3">
+					<img src="imgs/index/2.6.png" alt="">
+					<img src="imgs/index/xiaoguo.png" alt="" class="yiru">
+				</div>
+			</div>
+		</div>
+		<div class="case">
+			<div class="case_top"></div>
+			<div class="case_bottom">
+				<div class="case_bottom_left">
+					<div class="case_tu"></div>
+					<div class="case_tu2">
+						
+							<img src="imgs/index/3.1.png" alt="">
+						
+							<img src="imgs/index/3a.jpg" alt="">
+						
+							<img src="imgs/index/3b.jpg" alt="">
+						
+							<img src="imgs/index/3c.jpg" alt="">
+						
+					</div>
+					
+					<div class="case_fuhao">
+						&lt;
+					</div>
+					<div class="case_fuhao2">
+						&gt;
+					</div>
+					
+				</div>
+				<div class="case_bottom_right">
+					<div class="case_dazi">
+						<h1>LIVABLE ERA</h1>
+						<h2>阳台展示</h2>
+					</div>
+					<div class="case_wenzi">
+						<p>宜居时代有限公司成立于1984年，1988年进入家居行业，经过三十余年的发展"</p>
+					</div>
+					<div class="case_kuang">
+						<div class="case_kuang_left">
+							<span>MORE</span>
+						</div>
+						<div class="case_kuang_fangkuai">
+							<div class="case_kuang_shizi"></div>
+							<div class="case_kuang_shizi2"></div>
+						</div>	
+					</div>
+					<div class="case_right_bian"></div>
+					<div class="case_duanluo">
+						<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出"先行赔付"、"绿色环保"、"零延迟"、"一个月无理由退换货"、"没有增项的家装"等服务承诺，从消费者的切身利益出发，踏实认真履行"先行赔付"十数载。"让客户满意"、"向消费者倾斜1"是永远不懈的追求。
+						2017年，深圳地铁集团成为公司基石股东，表示将支持公司混合所有制结构和事业合伙人机制，支持公司城市配套服务商战略，支持公司稳定健康发展。未来公司和深圳地铁集团将充分发挥各自优势，共同推进实施 “轨道+物业”发展战略，全面提升城市配套服务能力，助推城市经济发展。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="team">
+			<div class="team_top"></div>
+			<div class="team_bottom">
+				<div class="team_bottom_left">
+					<h1>PROTENA TEAM</h1>
+					<h2>MORE</h2>
+					<p>项目团队成员来自13个国家顶尖家居行业专家，曾获得国内外多项大奖，承接各类建筑事物，项目资质齐全</p>
+				</div>
+				<div class="team_bottom_xia">
+					<div class="team_xia_item">
+						<div class="team_item_pic">
+							<img src="imgs/index/4.2.png" alt="">
+						</div>
+						<span class="team_item_zi">JONSON.YANG</span>
+					</div>
+					<div class="team_xia_item active">
+						<div class="team_item_pic">
+							<img src="imgs/index/4.3.png" alt="">
+						</div>
+						<span class="team_item_zi active">JONSON.YANG</span>
+					</div>
+					<div class="team_xia_item">
+						<div class="team_item_pic">
+							<img src="imgs/index/4.4.png" alt="">
+						</div>
+						<span class="team_item_zi">JONSON.YANG</span>
+					</div>
+					<div class="team_xia_item team_xia_item2">
+						<div class="team_item_pic">
+							<img src="imgs/index/4.5.png" alt="">
+						</div>
+						<span class="team_item_zi">JONSON.YANG</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_shang">
+			<div class="footer_dingwei">
+				<p>工作室地址ADDRESS</p>
+				<span>山西省太原市小店区平阳路220号</span>
+			</div>
+			<div class="footer_shang_bottom">
+				<div class="footer_bottom_left">
+					<div class="footer_box">
+						<h1>姓名</h1>
+					</div>
+					<div class="footer_box footer_box2">
+						<h1>邮箱</h1>
+					</div>
+					<div class="footer_box3">
+						<h2>您的留言。。。</h2>
+						<div class="footer_box3_pic">
+							<div class="footer_box3_left">
+								<span>SEND</span>
+							</div>
+							<div class="case_kuang_fangkuai">
+								<div class="case_kuang_shizi"></div>
+								<div class="case_kuang_shizi2"></div>
+							</div>	
+						</div>
+						
+					</div>	
+				</div>
+				<div class="footer_bottom_right">
+					<div class="footer_wen1">
+						<p>更多内容请查看</p>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen1_xia">
+							<h1>家居资质</h1>
+							<h1>新闻中心</h1>
+							<h1 class="footer_wen1_special">品牌印象</h1>
+							<h1>公司印象</h1>
+							<h1>企业新闻</h1>
+							<h1 class="footer_wen1_special">家居生活</h1>
+							<h1>合作关系</h1>
+							<h1>行业新闻</h1>
+							<h1 class="footer_wen1_special">企业影像</h1>
+							<h1>商务运营</h1>
+							<h1>区域活动</h1>
+							<h1 class="footer_wen1_special">家居精品</h1>
+						</div>
+					</div>
+					<div class="footer_wen2">
+						<h1>媒体运营号</h1>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen2_box">
+							<img src="imgs/index/z1.png" alt="">
+							<img src="imgs/index/z2.png" alt="">
+							<img src="imgs/index/z3.png" alt="" class="footer_box_special">
+						</div>
+						<p>关注公众平台／可获取更多咨询以及商务活动机会</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="footer_xia">
+			<p>京ICP备11017824号-4 京ICP证130164号北京市公安局朝阳分局备案编号:11010502000501</p>
+			<p>网络文化经营许可证京网文[2016]6173-844号广播电视节目制作经营许可证 （京）字第06990号</p>
+		</div>
+	</div>
+</body>
+<script src="css/index.js"></script>
+</html>

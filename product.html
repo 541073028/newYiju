@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品中心</title>
+	<link rel="icon" href="imgs/index/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/public.css">
+	<style>
+		.banner{
+			width: 1366px;
+			height: 284px;
+			/*background-color: pink;*/
+			position: relative;
+			margin: 0 auto; 
+		}
+		.banner img{
+			width: 1366px;
+			height: 248px;
+		}
+		.mianbao{
+			width: 1200px;
+			height: 70px;
+			left: 82px;
+			background-color: #2B6C8C;
+			position: absolute;
+			top: 214px;
+		}
+		.mianbao_box{
+			width: 349px;
+			height: 70px;
+			background-color: #0A0A0C;
+			float: left;
+		}
+		.mianbao_box2{
+			width: 4px;
+			height: 70px;
+			background-color: #F5C812;
+			float: left;
+		}
+		.bangongyi{
+			width: 314px;
+			height: 267px;
+			position: absolute;
+			top: 131px;
+			right: 91px;
+		}
+		.bangongyi img{
+			width: 314px;
+			height: 267px;
+		}
+		.mianbao_box_daohang{
+			width: 60px;
+			height: 35px;
+			margin-left: 30px;
+			/*background-color: blue;*/
+			margin-top: 17px;
+			float: left;
+			letter-spacing: 2px;
+		}
+		.mianbao_box_daohang2{
+			width: 160px;
+		}
+		.mianbao_daohang_left{
+			width: 4px;
+			height: 35px;
+			background-color: #fff;
+			float: left; 
+			border-radius: 6px; 
+		}
+		.mianbao_daohang_right{
+			/*width: 46px;*/
+			height: 35px;
+			/*background-color: red;*/
+			float: left; 
+			margin-left: 10px;
+			line-height: 18px;
+		}
+		.mianbao_daohang_right h1{
+			font-size: 18px;
+			color: #fff;
+			font-family: "微软雅黑"; 
+		}
+		.mianbao_daohang_right h2{
+			font-size: 12px;
+			color: #fff;
+			font-family: "ARIAL"; 
+		}
+		.mianbao_lunbo{
+			width: 4px;
+			height: 4px;
+			border-radius: 5px;
+			float: left;
+			margin-top: 33px; 
+			margin-left: 30px;
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+		.mianbao_lunbo2{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+		.mianbao_lunbo3{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 1);
+		}
+		.main{
+			width: 1366px;
+			padding-top: 40px;
+			/*background-color: green;*/
+			margin: 0 auto; 
+		}
+		.main_title{
+			width: 1366px;
+			height: 98px;
+		}
+		.main_title img{
+			width: 279px;
+			height: 98px;
+			display: block;
+			margin: 0 auto;
+		}
+		.main_bottom{
+			width: 1204px;
+			height: 899px;
+			/*background-color: blue;*/
+			margin: 0 auto;
+			margin-top: 50px;
+			position: relative;
+			overflow: hidden;
+		}
+		.main_itembox{
+			width: 7000px;
+			margin-left: -1216px;
+		}
+		.main_itemsmallbox{
+			float: left;
+			width: 1216px;
+
+		}
+		.main_item{
+			width: 264px;
+			height: 382px;
+			background-color: #fff;
+			border: 2px solid #D7D7D7;
+			margin-right: 40px;
+			position: relative;
+			float: left;
+			margin-bottom: 30px;
+		}
+		.main_item img{
+			width: 270px;
+			height: 357px;
+			margin-left: 10px;
+			margin-right: 38px;
+		}
+		.main_item_shutiao{
+			width: 2px;
+			height: 350px;
+			position: absolute;
+			top: 3px;
+			left: 260px;
+			background-color: #F5C812;
+		}
+		.main_item2{
+			margin-right: 0;
+		}
+		.main_item2 img{
+			margin-right: 0;
+		}
+		.main_item_yiru{
+			width: 262px;
+			height: 330px;
+			position: absolute;
+			top: 11px;
+			left: 12px;
+			background: url('imgs/product/yiru.png');
+			transition: bottom 1s linear,opacity 1s linear;
+			opacity: 0;
+		}
+		.main_item_yiru:hover{
+			opacity: 0.8;
+			display: block;
+		}
+		.yiru_wenzi{
+			width: 132px;
+			height: 126px;
+			margin-top: 35px;
+			margin-left: 23px;
+			/*background-color: pink;*/
+		}
+		.yiru_wenzi h1{
+			font-size: 22px; 
+			font-weight: lighter;
+			font-family: "微软雅黑";
+			color: #fff;
+		}
+		.yiru_wenzi h2{
+			font-size: 24px; 
+			font-weight: bold;
+			font-family: "ARIAL";
+			color: #fff;
+		}
+		.yiru_wenzi h3{
+			font-size: 24px; 
+			font-weight: normal;
+			font-family: "ARIAL";
+			color: #fff;
+			/*margin-top: 14px;*/
+		}
+		.yiru_wenzi_yuan{
+			width: 24px;
+			height: 24px;
+			margin-top: 14px;
+			background-color: #F5C812;
+			border-radius: 50%;
+			position: relative;
+		}
+		.juxing{
+			width: 2px;
+			height: 8px;
+			top: 8px;
+			left: 11px;
+			background-color: #3A3935;
+			position: absolute;
+		}
+		.juxing2{
+			width: 8px;
+			height: 2px;
+			top: 11px;
+			left: 8px;
+			background-color: #3A3935;
+			position: absolute;
+		}
+		.main_bottom_xia{
+			width: 359px;
+			height: 24px;
+			position: absolute;
+			bottom: 0;
+			left: 35%;
+
+		}
+		.main_bottom_btn{
+			width: 22px;
+			height: 12px;
+			color: #4F4F4F;
+			line-height: 24px;
+			float: left;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.main_bottom_yuanbox{
+			width: 250px;
+			height: 24px;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			/*background: red;*/
+			margin-left: 26px;
+			margin-right: 30px;
+			float: left;
+			cursor: pointer;
+		}
+		.main_bottom_yuan{
+			width: 24px;
+			height: 24px;
+			background-color: #E5E5E5;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 24px;
+			font-size: 12px;
+			color: #2B6C8C;
+			font-family: "ARIAL";
+		}
+		.main_bottom_yuan.special{
+			/*display: none;*/
+			opacity: 0;
+		}
+		.main_bottom_yuan.active{
+			background-color: #2B6C8C;
+			color: #fff;
+		}
+		.main_bottom_btn2{
+			width: 22px;
+			height: 12px;
+			color: #4F4F4F;
+			line-height: 24px;
+			float: left;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="yiju_header">
+		<div class="header_left">
+			<img src="imgs/index/logo.png" alt="">
+			<div class="header_left_zi">
+				<p>宜居时代</p>
+			</div>
+		</div>
+		<div class="header_right">
+			<a href="index.html">公司首页</a>
+			<a href="livable home.html">公司简介</a>
+			<div class="header_right_tiao header_right_tiao8"></div>
+			<div class="header_right_tiao2 header_right_tiao8"></div>
+			<h1><a href="product.html">产品中心</a></h1>
+			<div class="header_right_tiao3 header_right_tiao9"></div>
+			<div class="header_right_tiao4 header_right_tiao10"></div>
+			<a href="case show.html">案例展示</a>
+			<a href="team.html">团队介绍</a>
+			<a href="about.html">关于我们</a>
+			<div class="header_right_search">
+				<input type="text">
+				<input type="submit" value="&#xe633;" class="sousuo">
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<img src="imgs/product/pbanner.png" alt="">
+		<div class="mianbao">
+			<div class="mianbao_box">
+				<div class="mianbao_box_daohang">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>首页</h1>
+						<h2>HOME</h2>
+					</div>
+				</div>
+				<div class="mianbao_lunbo"></div>
+				<div class="mianbao_lunbo mianbao_lunbo2"></div>
+				<div class="mianbao_lunbo mianbao_lunbo3"></div>
+				<div class="mianbao_box_daohang mianbao_box_daohang2">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>产品中心</h1>
+						<h2>PRODUCT CENTER</h2>
+					</div>
+				</div>	
+			</div>
+			<div class="mianbao_box2"></div>
+		</div>
+		<div class="bangongyi">
+			<img src="imgs/product/mianbao.png" alt="">
+		</div>
+	</div>
+	<div class="main">
+		<div class="main_title">
+			<img src="imgs/product/title.png" alt="">
+		</div>
+		<div class="main_bottom">
+			<div class="main_itembox">
+				<div class="main_itemsmallbox">
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+				</div>
+
+				<div class="main_itemsmallbox">
+					<div class="main_item">
+					<img src="imgs/product/1.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+					<img src="imgs/product/2.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+					<img src="imgs/product/3.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+					<img src="imgs/product/4.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+
+					<div class="main_item">
+					<img src="imgs/product/5.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+					<img src="imgs/product/6.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+					<img src="imgs/product/7.png" alt="">
+					<div class="main_item_yiru">
+					<div class="yiru_wenzi">
+						<h1>办公椅</h1>
+						<h2>BUSINESS</h2>
+						<h3>CHINA</h3>
+						<div class="yiru_wenzi_yuan">
+							<div class="juxing"></div>
+							<div class="juxing2"></div>
+						</div>
+					</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+					<img src="imgs/product/1.png" alt="">
+					<div class="main_item_yiru">
+						<div class="yiru_wenzi">
+							<h1>办公椅</h1>
+							<h2>BUSINESS</h2>
+							<h3>CHINA</h3>
+							<div class="yiru_wenzi_yuan">
+								<div class="juxing"></div>
+								<div class="juxing2"></div>
+							</div>
+						</div>
+					</div>
+					<div class="main_item_shutiao"></div>
+					</div>
+				</div>
+				<div class="main_itemsmallbox">
+					<div class="main_item">
+						<img src="imgs/product/b1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/b2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/b1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/b2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+
+					<div class="main_item">
+						<img src="imgs/product/b1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/b2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/b1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/b2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+				</div>		
+				<div class="main_itemsmallbox">
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/d1.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/d2.jpg" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+				</div>
+
+				<div class="main_itemsmallbox">
+					<div class="main_item">
+						<img src="imgs/product/1.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/2.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/3.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/4.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+
+					<div class="main_item">
+						<img src="imgs/product/5.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/6.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item">
+						<img src="imgs/product/7.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+					<div class="main_item main_item2">
+						<img src="imgs/product/1.png" alt="">
+						<div class="main_item_yiru">
+							<div class="yiru_wenzi">
+								<h1>办公椅</h1>
+								<h2>BUSINESS</h2>
+								<h3>CHINA</h3>
+								<div class="yiru_wenzi_yuan">
+									<div class="juxing"></div>
+									<div class="juxing2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="main_item_shutiao"></div>
+					</div>
+				</div>
+			</div>	
+			<div class="main_bottom_xia">
+				<div class="main_bottom_btn">&lt;</div>
+				<ul class="main_bottom_yuanbox">
+					<li class="main_bottom_yuan special">3</li>
+					<li class="main_bottom_yuan active">1</li>
+					<li class="main_bottom_yuan">2</li>
+					<li class="main_bottom_yuan">3</li>
+					<li class="main_bottom_yuan special">1</li>
+				</ul>
+				<div class="main_bottom_btn2">&gt;</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="footer">
+		<div class="footer_shang">
+			<div class="footer_dingwei">
+				<p>工作室地址ADDRESS</p>
+				<span>山西省太原市小店区平阳路220号</span>
+			</div>
+			<div class="footer_shang_bottom">
+				<div class="footer_bottom_left">
+					<div class="footer_box">
+						<h1>姓名</h1>
+					</div>
+					<div class="footer_box footer_box2">
+						<h1>邮箱</h1>
+					</div>
+					<div class="footer_box3">
+						<h2>您的留言。。。</h2>
+						<div class="footer_box3_pic">
+							<div class="footer_box3_left">
+								<span>SEND</span>
+							</div>
+							<div class="case_kuang_fangkuai">
+								<div class="case_kuang_shizi"></div>
+								<div class="case_kuang_shizi2"></div>
+							</div>	
+						</div>
+						
+					</div>	
+				</div>
+				<div class="footer_bottom_right">
+					<div class="footer_wen1">
+						<p>更多内容请查看</p>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen1_xia">
+							<h1>家居资质</h1>
+							<h1>新闻中心</h1>
+							<h1 class="footer_wen1_special">品牌印象</h1>
+							<h1>公司印象</h1>
+							<h1>企业新闻</h1>
+							<h1 class="footer_wen1_special">家居生活</h1>
+							<h1>合作关系</h1>
+							<h1>行业新闻</h1>
+							<h1 class="footer_wen1_special">企业影像</h1>
+							<h1>商务运营</h1>
+							<h1>区域活动</h1>
+							<h1 class="footer_wen1_special">家居精品</h1>
+						</div>
+					</div>
+					<div class="footer_wen2">
+						<h1>媒体运营号</h1>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen2_box">
+							<img src="imgs/index/z1.png" alt="">
+							<img src="imgs/index/z2.png" alt="">
+							<img src="imgs/index/z3.png" alt="" class="footer_box_special">
+						</div>
+						<p>关注公众平台／可获取更多咨询以及商务活动机会</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="footer_xia">
+			<p>京ICP备11017824号-4 京ICP证130164号北京市公安局朝阳分局备案编号:11010502000501</p>
+			<p>网络文化经营许可证京网文[2016]6173-844号广播电视节目制作经营许可证 （京）字第06990号</p>
+		</div>
+	</div>
+</body>
+<script src="css/jquery.3.3.1.js"></script>
+<script>
+	let inner=$(".main_itembox");
+	let n=1;
+    let flag=true;
+    $(".main_bottom_btn2").click(function () {
+        if(flag){
+            flag=false;
+            n++;
+            inner.animate({marginLeft:-n*1216},1000,function () {
+                flag=true;
+                if(n===4){
+                    inner.css("marginLeft",-1216);
+                    $(".main_bottom_yuan").removeClass("active").eq(1).addClass("active");
+                    n=1;
+                }
+            })
+            $(".main_bottom_yuan").removeClass("active").eq(n).addClass("active");
+        }
+    })
+    $(".main_bottom_btn").click(function () {
+        if(flag) {
+            flag = false;
+            n--;
+            inner.animate({marginLeft: -n * 1216}, 1000,function (index,val) {
+                flag=true;
+                if(n===0){
+                    inner.css("marginLeft",-3648);
+                    $(".main_bottom_yuan").removeClass("active").eq(3).addClass("active");
+                    n=3;
+                }
+            })
+            $(".main_bottom_yuan").removeClass("active").eq(n).addClass("active");
+        }
+    })
+
+ 	$(".main_bottom_yuan").click(function(){
+ 	 	$(".main_bottom_yuan").removeClass("active");
+		$(this).addClass("active");
+		let index=$(this).index();;
+		inner.css("marginLeft",-1216*index);
+ 	 })
+</script>
+</html>

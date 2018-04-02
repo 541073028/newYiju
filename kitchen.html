@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>厨房展示</title>
+	<link rel="icon" href="imgs/index/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/public.css">
+	<style>
+		.banner{
+			width: 1366px;
+			height: 284px;
+			/*background-color: pink;*/
+			position: relative; 
+			margin: 0 auto;
+		}
+		.banner img{
+			width: 1366px;
+			height: 248px;
+		}
+		.mianbao{
+			width: 1200px;
+			height: 70px;
+			left: 82px;
+			background-color: #2B6C8C;
+			position: absolute;
+			top: 214px;
+		}
+		.mianbao_box{
+			/*width: 349px;*/
+			width: 573px;
+			height: 70px;
+			background-color: #0A0A0C;
+			float: left;
+		}
+		.mianbao_box2{
+			width: 4px;
+			height: 70px;
+			background-color: #F5C812;
+			float: left;
+		}
+		.bangongyi{
+			width: 314px;
+			height: 267px;
+			position: absolute;
+			top: 131px;
+			right: 91px;
+		}
+		.bangongyi img{
+			width: 314px;
+			height: 267px;
+		}
+		.mianbao_box_daohang{
+			width: 60px;
+			height: 35px;
+			margin-left: 30px;
+			/*background-color: blue;*/
+			margin-top: 17px;
+			float: left;
+			letter-spacing: 2px;
+		}
+		.mianbao_box_daohang2{
+			width: 160px;
+		}
+		.mianbao_daohang_left{
+			width: 4px;
+			height: 35px;
+			background-color: #fff;
+			float: left; 
+			border-radius: 6px; 
+		}
+		.mianbao_daohang_right{
+			/*width: 46px;*/
+			height: 35px;
+			/*background-color: red;*/
+			float: left; 
+			margin-left: 10px;
+			line-height: 18px;
+		}
+		.mianbao_daohang_right h1{
+			font-size: 18px;
+			color: #fff;
+			font-family: "微软雅黑"; 
+		}
+		.mianbao_daohang_right h2{
+			font-size: 12px;
+			color: #fff;
+			font-family: "ARIAL"; 
+		}
+		.mianbao_lunbo{
+			width: 4px;
+			height: 4px;
+			border-radius: 5px;
+			float: left;
+			margin-top: 33px; 
+			margin-left: 30px;
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+		.mianbao_lunbo2{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+		.mianbao_lunbo3{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 1);
+		}
+		.main{
+			width: 1366px;
+			/*height: 3380px;*/
+			/*background-color: skyblue;*/
+			padding-top: 33px;
+			margin: 0 auto;
+		}
+		.main_top{
+			margin-left: 113px;
+			height: 102px;
+			/*padding-top: 33px;*/
+			width: 1146px;
+			/*background-color: pink;*/
+			border-bottom: 1px solid #E6E6E6;
+		}
+		.main_top_xing{
+			width: 58px;
+			height: 5px;
+			border-radius: 0.7rem;
+			background-color: #5B5B5D; 
+		}
+		.main_top_twozi{
+			width: 320px;
+			height: 26px;
+			margin-top: 22px;
+			display: block;
+		}
+		.main_top_twozi h1{
+			font-size: 34px;
+			color: #5B5B5D;
+			font-family: "ARIAL";
+			float: left;
+			font-weight: bold;
+			/*margin-top: 22px;*/
+		}
+		.main_top_twozi h2{
+			font-size: 34px;
+			color: #5C5C5E;
+			font-family: "ARIAL";
+			float: left;
+			font-weight: normal;
+			/*margin-top: 22px;*/
+			margin-left: 14px;
+		}
+		.main_top_zi{
+			width: 108px;
+			height: 26px;
+			margin-top: 12px;
+		}
+		.main_top h3{
+			font-size: 26px;
+			color: #000;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			/*margin-top: 12px;*/
+		}
+		.main_zhong{
+			width: 1146px;
+			height: 1860px;
+			margin-top: 90px;
+			margin-left: 113px;
+			/*background-color: seagreen;*/
+		}
+		.main_zhong_title{
+			width: 1146px;
+			height: 97px;
+			/*background-color: white;*/
+		}
+		.main_zhong_title span{
+			font-size: 28px;
+			color: #647F8D;
+			font-family: "微软雅黑";
+			font-weight: normal;
+		}
+		.main_zhong_title p{
+			font-size: 16px;
+			color: #647F8D;
+			font-family: "ARIAL";
+			font-weight: bold;
+			margin-top: 16px;
+		}
+		.main_zhong_title h1{
+			font-size: 16px;
+			color: #7C7C7C;
+			font-family: "ARIAL";
+			font-weight: lighter;
+			margin-top: 9px;
+		}
+		.main_zhong_boxitem{
+			position: relative;
+			/*width: 4000px;*/
+			height: 1672px;
+		}
+		.main_zhong_smallboxitem{
+			position: absolute;
+			left: 0;
+			top: 0;
+			float: left;
+			width: 1146px;
+			height: 1742px;
+		}
+		.main_zhong_smallboxitem.active{
+			z-index: 99;
+		}
+		.main_zhong_item{
+			width: 1146px;
+			height: 648px;
+			/*background-color: blue;*/
+			margin-top: 90px;
+		}
+		.main_zhong_item_top{
+			width: 1146px;
+			height: 17px;
+			position: relative;
+		}
+		.main_zhong_fuhao{
+			width: 9px;
+			height: 9px;
+			background-color: #000;
+			top: 4px;
+			position: absolute;
+		}
+		.main_zhong_top_right{
+			width: 1124px;
+			height: 17px;
+			margin-left: 13px;
+		}
+		.main_zhong_top_right p{
+			font-size: 16px;
+			color: #000;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			float: left;
+			line-height: 14px; 
+		}
+		.main_zhong_top_right span{
+			font-size: 16px;
+			color: #C3C3C3;
+			font-family: "ARIAL";
+			font-weight: normal;
+			float: left;
+			margin-left: 10px;
+			line-height: 18px;
+		}
+		.main_zhong_item_wenzi{
+			width: 961px;
+			height: 150px;
+			margin-left: 1px;
+			/*background-color: red;*/
+			margin-top: 25px;
+			position: relative;
+		}
+		.main_zhong_item_wenzi p{
+			font-size: 14px;
+			color: #7A7A7A;
+			font-family: "微软雅黑";
+			font-weight: bold;
+		}
+		.main_zhong_item_wenzi span{
+			font-size: 14px;
+			color: #7A7A7A;
+			margin-top: 38px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			position: absolute;
+		}
+		.main_zhong_item_tu{
+			width: 1144px;
+			height: 393px;
+			/*background-color: pink;*/
+			margin-top: 45px;
+		}
+		.main_zhong_item_tu_left{
+			width: 697px;
+			height: 392px;
+			border: 4px solid #fff;
+			box-shadow: 0 3px 20px 8px #D4D8DB;
+			float: left;
+		}
+		.main_zhong_item_tu_left img{
+			width: 689px;
+			height: 384px;
+		}
+		.main_zhong_item_tu_right{
+			width: 426px;
+			height: 392px;
+			border: 4px solid #fff;
+			box-shadow: 0 3px 20px 8px #D4D8DB;
+			float: left;
+			margin-left: 21px;
+		}
+		.main_zhong_item_tu_right img{
+			width: 418px;
+			height: 384px;
+		}
+		.main_zhong_item2{
+			margin-top: 74px;
+			height: 668px;
+		}
+		.main_zhong_item_tu2{
+			width: 705px;
+			height: 395px;
+			/*background-color: pink;*/
+			margin-top: 60px;
+			border: 4px solid #fff;
+			box-shadow: 0 3px 20px 8px #D4D8DB;
+		}
+		.main_zhong_item_tu2 img{
+			width: 697px;
+			height: 387px;
+		}
+		.main_zhong_item3{
+			margin-top: 70px;
+			height: 212px;
+		}
+		.main_jiange{
+			width: 1146px;
+			height: 70px;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			margin-top: 50px;
+			margin-left: 113px;
+			position: relative;
+		}
+		.main_jiange_left{
+			width: 240px;
+			height: 28px;
+			margin-left: 40px;
+			/*background-color: pink; */
+			margin-top: 17px;
+			float: left;
+		}
+		.main_jiange_left_zi{
+			width: 65px;
+			height: 28px;
+			/*background-color: white;*/
+			float: left;
+		}
+		.main_jiange_left_zi p{
+			font-size: 12px;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			color: #A9A9A9;
+		}
+		.main_jiange_left_zi span{
+			font-size: 12px;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			color: #5E5E5E;
+		}
+		.main_jiange_left_tu{
+			width: 140px;
+			height: 28px;
+			/*background-color: blue;*/
+			margin-left: 35px;
+			float: left;
+		}
+		.main_jiange_left_tu img{
+			width: 30px;
+			height: 30px;
+			margin-right: 20px;
+		}
+		.main_jiange_left_tu .main_jiange_left_tu2{
+			margin-right: 0;
+		}
+		.main_jiange_rig{
+			width: 492px;
+			height: 68px;
+			left: 650px;
+			/*background-color: blue;*/
+			float: left;
+			position: absolute;
+			cursor: pointer;
+		}
+		.main_jiange_rig_kuang{
+			width: 224px;
+			height: 68px;
+			float: left;
+			margin-right: 40px;
+		}
+		.main_jiange_rig_kuang.active{
+			border-right: 2px solid #F5C812;
+			box-shadow: 0 3px 20px 8px #D4D8DB;
+		}
+		.main_jiange_rig_kuang h1{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			color: #636363;
+			margin-left: 8px;
+			margin-top: 28px;
+			float: left;
+		}
+		.main_jiange_xiantiao{
+			width: 1px;
+			height: 7px;
+			background-color: #000;
+			margin-top: 36px;
+			margin-left: 10px;
+			float: left;
+		}
+		.main_jiange_rig_kuang p{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #636363;
+			margin-top: 28px;
+			float: left;
+			margin-left: 8px;
+		}
+		.main_jiange_rig_spckuang{
+			width: 224px;
+			height: 68px;
+			float: left;
+		}
+		.main_jiange_rig_spckuang.active{
+			border-right: 2px solid #F5C812;
+			box-shadow: 0 3px 20px 8px #D4D8DB;
+		}
+		.main_jiange_rig_spckuang h1{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			color: #636363;
+			margin-left: 8px;
+			margin-top: 28px;
+			float: left;
+		}
+		.main_jiange_rig_spckuang p{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #636363;
+			margin-top: 28px;
+			float: left;
+			margin-left: 8px;
+		}
+		
+		.main_xia{
+			width: 1141px;
+			margin-top: 42px;
+			margin-left: 113px;
+		}
+		.main_xia_line{
+			width: 47px;
+			height: 4px;
+			background-color: #2D6C8C;
+		}
+		.main_xia_title{
+			width: 178px;
+			height: 31px;
+			/*background-color: white;*/
+			margin-top: 18px;
+		}
+		.main_xia_title p{
+			font-size: 30px;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			color: #000;
+			float: left;
+			line-height: 26px; 
+			margin-left: 4px;
+		}
+		.main_xia_title_fu{
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: #2D6C8C;
+			margin-left: 9px;
+			margin-top: 12px;
+			float: left;
+		}
+		.main_xia_title .main_xia_title_spc{
+			margin-left: 0;
+		}
+		.main_xia_title span{
+			font-size: 30px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #696969;
+			float: left;
+			line-height: 26px; 
+			margin-left: 4px;
+		}
+		.main_xia h1{
+			font-size: 30px;
+			color: #2B6C8C;
+			font-family: "ARIAL";
+			font-weight: bold;
+			float: left;
+			margin-top: 13px;
+		}
+		.main_xia h2{
+			font-size: 30px;
+			color: #8D8D8D;
+			font-family: "ARIAL";
+			font-weight: bold;
+			float: left;
+			margin-top: 13px;
+		}
+		#message{
+			width: 960px;
+			height: 200px;
+			border: 2px solid #ddd;
+			resize: none;
+			margin: 0 auto;
+			margin-top: 80px;
+			padding: 20px;
+		}
+		#submit{
+			width: 70px;
+			height: 30px;
+			line-height: 30px;
+			background: #33f;
+			margin: 0 auto;
+			margin-top: 30px;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 5px;
+			color: #999;
+			cursor: pointer;
+		}
+		.main_xia_item{
+			width: 1128px;
+			height: 284px;
+			/*background-color: #2D6C8C;*/
+			margin-left: 15px;
+			margin-top: 80px;
+		}
+		.main_xia_item_zuo{
+			width: 120px;
+			height: 300px;
+			float: left;
+		}
+		.main_xia_item_zuo img{
+			width: 120px;
+			height: 120px;
+		}
+		.main_xia_item_you{
+			width: 960px;
+			height: 284px;
+			float: left;
+			/*background-color: yellow;*/
+			margin-left: 48px;
+		}
+		.main_xia_item_you h1{
+			font-size: 22px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #A6A6A6;
+			float: left;
+		}
+		.main_xia_item_xinxi{
+			width: 948px;
+			height: 26px;
+			float: left;
+			/*background-color: red;*/
+		}
+		.main_xia_item_xinxi h2{
+			font-size: 24px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #000;
+			float: left;
+			line-height: 2px;
+		}
+		.main_xia_item_xinxi h3{
+			font-size: 26px;
+			font-family: "ARIAL";
+			font-weight: normal;
+			color: #000;
+			float: left;
+			margin-left: 14px;
+		}
+		.main_xia_item_xinxi h4{
+			font-size: 18px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #7A7A7A;
+			float: left;
+			margin-left: 493px;
+			line-height: 26px;
+		}
+		.main_xia_item_xinxi p{
+			font-size: 18px;
+			font-family: "ARIAL";
+			font-weight: normal;
+			color: #7A7A7A;
+			float: left;
+			margin-left: 14px;
+			line-height: 26px;
+		}
+		.main_xia_item_box{
+			width: 960px;
+			height: 190px;
+			margin-top: 96px;
+			border: 2px solid #EEEEEE;
+		}
+		.main_xia_item_box_zi{
+			width: 851px;
+			height: 93px;
+			margin-left: 48px;
+			margin-top: 42px;
+			/*background-color: red;*/
+		}
+		.main_xia_item_box_zi p{
+			font-size: 22px;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			color: #7A7A7A;
+		}
+		.main_xia_item2{
+			margin-top: 36px;
+		}
+		.main_fanye{
+			width: 359px;
+			height: 24px;
+			margin: 50px auto 0;
+			/*background-color: blue; */
+		}
+		.main_bottom_btn{
+			width: 22px;
+			height: 12px;
+			color: #4F4F4F;
+			line-height: 24px;
+			float: left;
+		}
+		.main_bottom_yuan{
+			width: 24px;
+			height: 24px;
+			background-color: #E5E5E5;
+			margin-left: 26px;
+			border-radius: 50%;
+			margin-bottom: 0;
+			float: left;
+			text-align: center;
+		}
+		.main_bottom_yuan span{
+			font-size: 12px;
+			color: #2B6C8C;
+			font-family: "ARIAL";  
+		}
+		.main_bottom_yuan2{
+			width: 24px;
+			height: 24px;
+			background-color: #2B6C8C;
+			margin-left: 26px;
+			border-radius: 50%;
+			margin-bottom: 0;
+			float: left;
+			text-align: center;
+		}
+		.main_bottom_yuan2 span{
+			font-size: 12px;
+			color: #fff;
+			font-family: "ARIAL";  
+		}
+		.main_bottom_shenglue{
+			width: 4px;
+			height: 4px;
+			background-color: #2B6C8C;
+			margin-left: 26px;
+			float: left;
+			margin-top: 10px;
+		}
+		.main_bottom_shenglue2{
+			margin-left: 2px;
+		}
+		.main_bottom_btn2{
+			margin-left: 23px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="yiju_header">
+		<div class="header_left">
+			<img src="imgs/index/logo.png" alt="">
+			<div class="header_left_zi">
+				<p>宜居时代</p>
+			</div>
+		</div>
+		<div class="header_right">
+			<a href="index.html">公司首页</a>
+			
+			<a href="livable home.html">公司简介</a>
+			<a href="product.html">产品中心</a>
+			<div class="header_right_tiao header_right_tiao11"></div>
+			<div class="header_right_tiao2 header_right_tiao11"></div>
+			<h1><a href="case show.html">案例展示</a></h1>
+			<div class="header_right_tiao3 header_right_tiao12"></div>
+			<div class="header_right_tiao4 header_right_tiao13"></div>
+			<a href="team.html">团队介绍</a>
+			<a href="about.html">关于我们</a>
+			<div class="header_right_search">
+				<input type="text">
+				<input type="submit" value="&#xe633;" class="sousuo">
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<img src="imgs/case show/cbanner.png" alt="">
+		<div class="mianbao">
+			<div class="mianbao_box">
+				<div class="mianbao_box_daohang">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>首页</h1>
+						<h2>HOME</h2>
+					</div>
+				</div>
+				<div class="mianbao_lunbo"></div>
+				<div class="mianbao_lunbo mianbao_lunbo2"></div>
+				<div class="mianbao_lunbo mianbao_lunbo3"></div>
+				<div class="mianbao_box_daohang mianbao_box_daohang2">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>案例展示</h1>
+						<h2>THE CASE SHOWS</h2>
+					</div>
+				</div>
+
+				<div class="mianbao_lunbo"></div>
+				<div class="mianbao_lunbo mianbao_lunbo2"></div>
+				<div class="mianbao_lunbo mianbao_lunbo3"></div>
+				<div class="mianbao_box_daohang mianbao_box_daohang2">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>厨房展示</h1>
+						<h2>KITCHEN DISPLAY</h2>
+					</div>
+				</div>		
+			</div>
+			<div class="mianbao_box2"></div>
+		</div>
+		<div class="bangongyi">
+			<img src="imgs/product/mianbao.png" alt="">
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="main_top">
+			<div class="main_top_xing"></div>
+			<div class="main_top_twozi">
+				<h1>KITCHEN</h1>
+				<h2>DISPLAY</h2>
+			</div>
+			<div class="main_top_zi">
+				<h3>厨房展示</h3>
+			</div>
+		</div>
+		<div class="main_zhong">
+			<div class="main_zhong_title">
+				<span>宜居时代经典厨房案例展示</span>
+				<p>A CASE STUDY OF THE CLASSIC KITCHEN OF LIVABLE TIMES.</p>
+				<h1>KITCHEN DISPLAY</h1>
+			</div>
+			<div class="main_zhong_boxitem">
+				<div class="main_zhong_smallboxitem">
+					<div class="main_zhong_item">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu">
+							<div class="main_zhong_item_tu_left">
+								<img src="imgs/kitchen/ka.jpg" alt="">
+							</div>
+							<div class="main_zhong_item_tu_right">
+								<img src="imgs/kitchen/ke.jpg" alt="">
+							</div>
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item2">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu2">
+							<img src="imgs/kitchen/ka.jpg" alt="">
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item3">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>	
+					</div>
+				</div>
+
+				<div class="main_zhong_smallboxitem active">
+					<div class="main_zhong_item">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu">
+							<div class="main_zhong_item_tu_left">
+								<img src="imgs/kitchen/1.png" alt="">
+							</div>
+							<div class="main_zhong_item_tu_right">
+								<img src="imgs/kitchen/2.png" alt="">
+							</div>
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item2">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu2">
+							<img src="imgs/kitchen/3.png" alt="">
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item3">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>	
+					</div>
+				</div>
+
+				<div class="main_zhong_smallboxitem">
+					<div class="main_zhong_item">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu">
+							<div class="main_zhong_item_tu_left">
+								<img src="imgs/kitchen/ka.jpg" alt="">
+							</div>
+							<div class="main_zhong_item_tu_right">
+								<img src="imgs/kitchen/ke.jpg" alt="">
+							</div>
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item2">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu2">
+							<img src="imgs/kitchen/ka.jpg" alt="">
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item3">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>	
+					</div>
+				</div>
+
+				<div class="main_zhong_smallboxitem">
+					<div class="main_zhong_item">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu">
+							<div class="main_zhong_item_tu_left">
+								<img src="imgs/kitchen/1.png" alt="">
+							</div>
+							<div class="main_zhong_item_tu_right">
+								<img src="imgs/kitchen/2.png" alt="">
+							</div>
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item2">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>
+						<div class="main_zhong_item_tu2">
+							<img src="imgs/kitchen/3.png" alt="">
+						</div>	
+					</div>
+
+					<div class="main_zhong_item main_zhong_item3">
+						<div class="main_zhong_item_top">
+							<div class="main_zhong_fuhao"></div>
+							<div class="main_zhong_top_right">
+								<p>宜居时代有限公司创建于1986年</p>
+								<span>/ LIVABLE TIMES CO.LTD WAS FOUNDED IN 1986.</span>
+							</div>
+						</div>
+						<div class="main_zhong_item_wenzi">
+							<p>宜居时代创造性的引进和提出了先进的服务理念。率先提出“先行赔付”、“绿色环保”、“零延迟”、“一个月无理由退换货”、“没有增项的家装”等服务承诺，从消费者的切身利益出发，踏实认真履行“先行赔付”十数载。“让客户满意”、“向消费者倾斜”是永远不懈的追求。</p>
+							<span>宜居时代自2000年向消费者承诺“先行赔付”以来，相继推出了“绿色环保”、“质量问题一年内包修、包换、包退”、“非质量问题一个月无理由退换”、“统一收银和统一退换货”、“同一品牌同一价”、 “送货安装零延迟”等服务举措。这些服务举措的推出，不但为宜居时代赢得了良好口碑，促进了宜居时代的发展壮大，而且带动了家居建材行业管理和服务水平的升级，其中多项举措已成为整个行业共同遵循的服务准则，宜居时代17年的发展史成为名符其实的服务提升史！居然之家已经成为了家居行业服务创新的标杆企业！</span>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_jiange">
+			<div class="main_jiange_left">
+				<div class="main_jiange_left_zi">
+					<p>分享到 :</p>
+					<span>SHARE TO</span>
+				</div>
+				<div class="main_jiange_left_tu">
+					<img src="imgs/kitchen/weibo.png" alt="">
+					<img src="imgs/kitchen/weixin.png" alt="">
+					<img src="imgs/kitchen/qq.png" alt="" class="main_jiange_left_tu2">
+				</div>
+			</div>
+			<div class="main_jiange_rig">
+				<div class="main_jiange_rig_kuang active">
+					<h1>上一篇</h1>
+					<div class="main_jiange_xiantiao"></div>
+					<p>优秀的室内设计排名</p>
+				</div>
+				<div class="main_jiange_rig_spckuang active">
+					<h1>下一篇</h1>
+					<div class="main_jiange_xiantiao"></div>
+					<p>优秀的室内设计排名</p>
+				</div>
+			</div>
+		</div>
+		<div class="main_xia">
+			<div class="main_xia_line"></div>
+			<div class="main_xia_title">
+				<p class="main_xia_title_spc">评</p>
+				<div class="main_xia_title_fu"></div>
+				<p>论</p>
+				<div class="main_xia_title_fu"></div>
+				<span>中</span>
+				<div class="main_xia_title_fu"></div>
+				<span>心</span>
+			</div>
+			<h1>BR</h1>
+			<h2>AND</h2>
+			<textarea name="message" id="message" placeholder="留下您的宝贵意见。。。"></textarea>
+			<div id="submit">提交</div>
+			<div class="main_xia_item">
+				<div class="main_xia_item_zuo">
+					<img src="imgs/kitchen/4.png" alt="">
+				</div>	
+				<div class="main_xia_item_you">
+					<h1>家居设计师</h1>
+					<div class="main_xia_item_xinxi">
+						<h2>杨波比</h2>
+						<h3>BOBE.YANG</h3>
+						<h4>时间</h4>
+						<p>2017-09-09 21:09:00</p>
+					</div>
+					<div class="main_xia_item_box">
+						<div class="main_xia_item_box_zi">
+							<p>学校宣传片是一个学校十分注重的事情，关系到自己学校形象和名声，学校的宣传片主要分为学校招生宣传片，学校形象宣传片等，每一种航拍学校宣传片都着其独特的角度和意义。 学校的宣传片主要是围绕学生和家长</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_xia_item main_xia_item2">
+				<div class="main_xia_item_zuo">
+					<img src="imgs/kitchen/4.png" alt="">
+				</div>	
+				<div class="main_xia_item_you">
+					<h1>家居设计师</h1>
+					<div class="main_xia_item_xinxi">
+						<h2>杨波比</h2>
+						<h3>BOBE.YANG</h3>
+						<h4>时间</h4>
+						<p>2017-09-09 21:09:00</p>
+					</div>
+					<div class="main_xia_item_box">
+						<div class="main_xia_item_box_zi">
+							<p>学校宣传片是一个学校十分注重的事情，关系到自己学校形象和名声，学校的宣传片主要分为学校招生宣传片，学校形象宣传片等，每一种航拍学校宣传片都着其独特的角度和意义。 学校的宣传片主要是围绕学生和家长</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_xia_item main_xia_item2">
+				<div class="main_xia_item_zuo">
+					<img src="imgs/kitchen/4.png" alt="">
+				</div>	
+				<div class="main_xia_item_you">
+					<h1>家居设计师</h1>
+					<div class="main_xia_item_xinxi">
+						<h2>杨波比</h2>
+						<h3>BOBE.YANG</h3>
+						<h4>时间</h4>
+						<p>2017-09-09 21:09:00</p>
+					</div>
+					<div class="main_xia_item_box">
+						<div class="main_xia_item_box_zi">
+							<p>学校宣传片是一个学校十分注重的事情，关系到自己学校形象和名声，学校的宣传片主要分为学校招生宣传片，学校形象宣传片等，每一种航拍学校宣传片都着其独特的角度和意义。 学校的宣传片主要是围绕学生和家长</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_fanye">
+				<div class="main_bottom_btn">&lt;</div>
+				<div class="main_bottom_yuan">
+					<span>1</span>
+				</div>
+				<div class="main_bottom_yuan">
+					<span>2</span>
+				</div>
+				<div class="main_bottom_yuan2">
+					<span>3</span>
+				</div>
+				<div class="main_bottom_shenglue"></div>
+				<div class="main_bottom_shenglue main_bottom_shenglue2"></div>
+				<div class="main_bottom_shenglue main_bottom_shenglue2"></div>
+
+				<div class="main_bottom_yuan">
+					<span>1</span>
+				</div>
+				<div class="main_bottom_yuan">
+					<span>2</span>
+				</div>
+				<div class="main_bottom_btn main_bottom_btn2">&gt;</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer_shang">
+			<div class="footer_dingwei">
+				<p>工作室地址ADDRESS</p>
+				<span>山西省太原市小店区平阳路220号</span>
+			</div>
+			<div class="footer_shang_bottom">
+				<div class="footer_bottom_left">
+					<div class="footer_box">
+						<h1>姓名</h1>
+					</div>
+					<div class="footer_box footer_box2">
+						<h1>邮箱</h1>
+					</div>
+					<div class="footer_box3">
+						<h2>您的留言。。。</h2>
+						<div class="footer_box3_pic">
+							<div class="footer_box3_left">
+								<span>SEND</span>
+							</div>
+							<div class="case_kuang_fangkuai">
+								<div class="case_kuang_shizi"></div>
+								<div class="case_kuang_shizi2"></div>
+							</div>	
+						</div>
+						
+					</div>	
+				</div>
+				<div class="footer_bottom_right">
+					<div class="footer_wen1">
+						<p>更多内容请查看</p>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen1_xia">
+							<h1>家居资质</h1>
+							<h1>新闻中心</h1>
+							<h1 class="footer_wen1_special">品牌印象</h1>
+							<h1>公司印象</h1>
+							<h1>企业新闻</h1>
+							<h1 class="footer_wen1_special">家居生活</h1>
+							<h1>合作关系</h1>
+							<h1>行业新闻</h1>
+							<h1 class="footer_wen1_special">企业影像</h1>
+							<h1>商务运营</h1>
+							<h1>区域活动</h1>
+							<h1 class="footer_wen1_special">家居精品</h1>
+						</div>
+					</div>
+					<div class="footer_wen2">
+						<h1>媒体运营号</h1>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen2_box">
+							<img src="imgs/index/z1.png" alt="">
+							<img src="imgs/index/z2.png" alt="">
+							<img src="imgs/index/z3.png" alt="" class="footer_box_special">
+						</div>
+						<p>关注公众平台／可获取更多咨询以及商务活动机会</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="footer_xia">
+			<p>京ICP备11017824号-4 京ICP证130164号北京市公安局朝阳分局备案编号:11010502000501</p>
+			<p>网络文化经营许可证京网文[2016]6173-844号广播电视节目制作经营许可证 （京）字第06990号</p>
+		</div>
+	</div>
+</body>
+<script src="css/jquery.3.3.1.js"></script>
+<script>
+	let n=0;
+	let flag=true;
+	$(".main_jiange_rig_kuang").removeClass("active");
+	$(".main_jiange_rig_spckuang").removeClass("active");
+	$(".main_jiange_rig_spckuang").click(function(){
+		$(".main_jiange_rig_kuang").removeClass("active");
+		if(flag){
+			flag=false;
+			n++;
+			if(n===$(".main_zhong_smallboxitem").length){
+				n=0;
+			}
+			$(".main_jiange_rig_spckuang").addClass("active");
+			$(".main_zhong_smallboxitem").removeClass("active").eq(n).addClass("active");
+			$(".main_zhong_smallboxitem").animate({},3000,function(){
+				flag=true;
+			})
+		}
+	})
+	$(".main_jiange_rig_kuang").click(function(){
+		$(".main_jiange_rig_spckuang").removeClass("active");
+		if(flag){
+			flag=false;
+			n--;
+			if(n<0){
+				n=$(".main_zhong_smallboxitem").length-1;
+			}
+			$(".main_jiange_rig_kuang").addClass("active");
+			$(".main_zhong_smallboxitem").removeClass("active").eq(n).addClass("active");
+			$(".main_zhong_smallboxitem").animate({},3000, function(){
+				flag=true;
+			})
+		}
+	})
+</script>
+</html>

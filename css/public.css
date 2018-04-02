@@ -1,0 +1,9 @@
+*{
+	margin: 0;      /*body-8px;*/
+	text-decoration: none;     /*a标签的下划线  */
+	font-style: normal;
+	padding: 0;
+	list-style: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+}

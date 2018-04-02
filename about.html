@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于我们</title>
+	<link rel="icon" href="imgs/index/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/public.css">
+	<style>
+		.banner{
+			width: 1366px;
+			height: 284px;
+			/*background-color: pink;*/
+			position: relative; 
+			margin: 0 auto;
+		}
+		.banner img{
+			width: 1366px;
+			height: 248px;
+		}
+		.mianbao{
+			width: 1200px;
+			height: 70px;
+			left: 82px;
+			background-color: #2B6C8C;
+			position: absolute;
+			top: 214px;
+		}
+		.mianbao_box{
+			width: 349px;
+			height: 70px;
+			background-color: #0A0A0C;
+			float: left;
+		}
+		.mianbao_box2{
+			width: 4px;
+			height: 70px;
+			background-color: #F5C812;
+			float: left;
+		}
+		.bangongyi{
+			width: 314px;
+			height: 267px;
+			position: absolute;
+			top: 131px;
+			right: 91px;
+		}
+		.bangongyi img{
+			width: 314px;
+			height: 267px;
+		}
+		.mianbao_box_daohang{
+			width: 60px;
+			height: 35px;
+			margin-left: 30px;
+			/*background-color: blue;*/
+			margin-top: 17px;
+			float: left;
+			letter-spacing: 2px;
+		}
+		.mianbao_box_daohang2{
+			width: 160px;
+		}
+		.mianbao_daohang_left{
+			width: 4px;
+			height: 35px;
+			background-color: #fff;
+			float: left; 
+			border-radius: 6px; 
+		}
+		.mianbao_daohang_right{
+			/*width: 46px;*/
+			height: 35px;
+			/*background-color: red;*/
+			float: left; 
+			margin-left: 10px;
+			line-height: 18px;
+		}
+		.mianbao_daohang_right h1{
+			font-size: 18px;
+			color: #fff;
+			font-family: "微软雅黑"; 
+		}
+		.mianbao_daohang_right h2{
+			font-size: 12px;
+			color: #fff;
+			font-family: "ARIAL"; 
+		}
+		.mianbao_lunbo{
+			width: 4px;
+			height: 4px;
+			border-radius: 5px;
+			float: left;
+			margin-top: 33px; 
+			margin-left: 30px;
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+		.mianbao_lunbo2{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+		.mianbao_lunbo3{
+			margin-left: 1px;
+			background-color: rgba(255, 255, 255, 1);
+		}
+		.main{
+			width: 100%;
+			height: 3103px;
+			/*background-color: pink; */
+			margin: 0 auto;
+		}
+		.main_cuture{
+			width: 1366px;
+			height: 550px;
+			/*background-color: seagreen;*/
+			padding-top: 40px;
+			margin: 0 auto;
+		}
+		.main_title{
+			width: 1366px;
+			height: 98px;
+		}
+		.main_title img{
+			width: 279px;
+			height: 98px;
+			display: block;
+			margin: 0 auto;
+		}
+		.main_cuture_item{
+			width: 100%;
+			height: 372px;
+			margin-top: 40px;
+			/*background-color: red;*/
+		}
+		.main_cuture_item_zuo{
+			width: 344px;
+			height: 372px;
+			float: left;
+		}
+		.main_cuture_item_zuo img{
+			width: 344px;
+			height: 372px;
+		}
+		.main_cuture_item_zhong{
+			width: 552px;
+			height: 372px;
+			margin-left: 50px;
+			/*background-color: blue;*/
+			float: left;
+		}
+		.main_cuture_item_zhong h1{
+			font-size: 20px;
+			color: #1D1D1D;
+			font-family: "ARIAL";
+			font-weight: normal;
+		}
+		.main_cuture_item_zhong h2{
+			font-size: 38px;
+			color: #1D1D1D;
+			font-family: "ARIAL";
+			font-weight: bold;
+		}
+		.main_caitiao{
+			width: 552px;
+			height: 3px;
+			margin-top: 20px;
+		}
+		.main_caitiao_left{
+			width: 116px;
+			height: 3px;
+			background-color: #F5C812;
+			float: left;
+		}
+		.main_caitiao_right{
+			width: 436px;
+			height: 3px;
+			background-color: #255875;
+			float: right;
+		}
+		.main_cuture_item_zhong h3{
+			font-size: 20px;
+			color: #1D1D1D;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-top: 22px;
+		}
+		.main_cuture_item_zhong span{
+			font-size: 18px;
+			color: #1D1D1D;
+			font-family: "ARIAL";
+			font-weight: lighter;
+			/*margin-top: 24px;*/
+		}
+		.main_cuture_item_zhong p{
+			font-size: 14px;
+			color: #7B7B7B;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			/*margin-top: 17px;*/
+		}
+		.main_cuture_wenzi{
+			margin-top: 4px;
+		}
+		.main_cuture_more{
+			width: 131px;
+			height: 31px;
+			margin-top: 16px;
+		}
+		.main_cuture_more_left{
+			width: 102px;
+			height: 31px;
+			border: 2px solid #000;
+			float: left;
+			text-align: center;
+		}
+		.main_cuture_more_left p{
+			font-size: 24px;
+			color: #272727;
+			font-family: "ARIAL";
+			line-height: 28px;
+		}
+		.main_cuture_more_right{
+			width: 31px;
+			height: 31px;
+			border: 2px solid #000;
+			margin-left: -2px;
+			float: left;
+			background-color: #255974;
+			position: relative;
+		}
+		.main_cuture_more_shizi{
+			width: 2px;
+			height: 13px;
+			background-color: #fff;
+			top: 7px;
+			left: 14px;
+			position: absolute;
+		}
+		.main_cuture_more_shizi2{
+			width: 12px;
+			height: 3px;
+			background-color: #fff;
+			top: 12px;
+			left: 9px;
+			position: absolute;
+		}
+		.main_cuture_item_you{
+			width: 252px;
+			height: 444px;
+			float: left;
+			position: relative;
+			margin-left: 164px;
+		}
+		.main_bian_shang{
+			width: 147px;
+			height: 11px;
+			background-color: #F5C812;
+			/*margin-left: -13px;*/
+		}
+		.main_bian_zuo{
+			width: 13px;
+			height: 283px;
+			background-color: #F5C812;
+		}
+		.main_cuture_item_you img{
+			width: 239px;
+			height: 431px;
+			left: 13px;
+			top: 11px;
+			position: absolute;
+			/*float: left;*/
+		}
+		.main_hangye{
+			width: 1366px;
+			height: 802px;
+			margin: 0 auto;
+			padding-top: 72px;
+			/*background-color: yellow;*/
+		}
+		.main_hangye_top{
+			width: 1013px;
+			height: 345px;
+			margin: 42px auto 0;
+			position: relative;
+			/*background-color: red;*/
+		}
+		.main_hangye_left{
+			width: 14px;
+			height: 283px;
+			background-color: #255974; 
+			top: 33px;
+			position: absolute;
+		}
+		.main_hangye_xia{
+			width: 160px;
+			height: 15px;
+			background-color: #255974;
+			position: absolute;
+			bottom: 29px; 
+		}
+		.main_hangye_box{
+			width: 1000px;
+			height: 302px;
+			background-color: #000;
+			position: absolute;
+			top: 0;
+			left: 14px;
+		}
+		.main_hangye_box_left{
+			width: 305px;
+			height: 258px;
+			margin-left: 168px;
+			margin-top: 33px;
+			/*background-color: skyblue;*/
+			float: left;
+		} 
+		
+		.main_hangye_box_left h1{
+			font-size: 38px;
+			color: #fff;
+			font-family: "ARIAL";
+			font-weight: bold;
+			float: left;
+		}
+		.main_hangye_box_left h2{
+			font-size: 38px;
+			color: #fff;
+			font-family: "ARIAL";
+			font-weight: normal;
+			float: left;
+			margin-left: 12px;
+		}
+		.main_hangye_box_left p{
+			font-size: 20px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			margin-top: 21px;
+		}
+		.main_hangye_box_left span{
+			font-size: 38px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-top: 12px;
+		}
+		.main_hangye_box_right{
+			float: left;
+			width: 503px;
+			height: 302px;
+			/*margin-left: 168px;*/
+		}
+		.main_hangye_box_right img{
+			width: 503px;
+			height: 302px;
+		}
+		.main_hangye_top_new{
+			width: 276px;
+			height: 85px;
+			position: absolute;
+			top: 233px;
+			left: 180px;
+		}
+		.main_hangye_top h3{
+			font-size: 123px;
+			color: #245974;
+			font-family: "ARIAL";
+			font-weight: bold;
+			font-style: italic;
+		}
+		.main_hangye_bottom{
+			/*width: 270px;*/
+			height: 755px;
+			width: 1013px;
+			margin: 0 auto;
+		}
+		.main_hangye_bottom_item{
+			width: 755px;
+			height: 245px;
+			margin-left: 182px;
+			position: relative;
+			/*background-color: blue; */
+		}
+		.main_hangye_bottom_left{
+			width: 131px;
+			height: 31px;
+			float: left;
+			position: absolute;
+			top: 203px;
+			left: 21px;
+		}
+		.main_hangye_bottom_right{
+			width: 449px;
+			height: 245px;
+			/*background-color: green;*/
+			left: 306px;
+			position: absolute;
+			float: left;
+		}
+		.main_hangye_bottom_right p{
+			font-size: 20px;
+			color: #1D1D1D;
+			font-family: "微软雅黑";
+			font-weight: normal;
+
+		}
+		.main_hangye_bottom_right span{
+			font-size: 14px;
+			color: #636363;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			margin-top: 20px;
+		}
+		.main_bottom_right_xia{
+			width: 449px;
+			height: 138px;
+			background-color: #fff;
+			margin-top: 38px;
+			padding-top: 20px;
+			border-right: 5px solid #F5C812;
+			box-shadow: 0 3px 20px 8px #E9EBEC;
+		}
+		.main_pinpai{
+			width: 1366px;
+			height: 1207px;
+			/*background-color: red;*/
+			padding-top: 64px;
+			margin: 0 auto;
+		}
+		.main_pinpai_bottom{
+			width: 100%;
+			height: 1002px;
+			margin-top: 44px;
+			position: relative;
+		}
+		.main_pinpai_bottom_shang{
+			width: 1366px;
+			height: 398px;
+			margin-left: 84px;
+		}
+		.main_pinpai_item{
+			width: 398px;
+			height: 398px;
+			float: left;
+		}
+		.main_pinpai_item img{
+			width: 398px;
+			height: 398px;
+		}
+		.main_pinpai_item2{
+			margin-left: 0;
+			position: relative;
+		}
+		.main_pinpai_meng{
+			width: 398px;
+			height: 398px;
+			position: absolute;
+			top: 0;
+			background: rgba(43, 108, 140, 0.3);
+		}
+		.main_pinpai_meng h1{
+			font-size: 28px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-top: 85px;
+			margin-left: 50px;
+		}
+		.main_pinpai_meng p{
+			font-size: 14px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			margin-left: 50px;
+		}
+		.main_pinpai_meng span{
+			font-size: 14px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-left: 50px;
+			display: block;
+		}
+		.main_pinpai_meng_zi{
+			margin-top: 18px;
+		}
+		.main_pinpai_meng_zi2{
+			margin-top: 30px;
+		}
+		.main_pinpai_boxs{
+			margin-top: 80px;
+			margin-left: 228px;
+		}
+		.main_pinpai_item3{
+			width: 284px;
+			height: 682px;
+			float: left;
+		}
+		.main_pinpai_item3 img{
+			width: 284px;
+			height: 682px;
+		}
+		.main_pinpai_itemsp{
+			width: 482px;
+			height: 398px;
+			float: left;
+		}
+		.main_pinpai_itemsp img{
+			width: 482px;
+			height: 398px;
+		}
+		.main_pinpai_xbottom{
+			width: 1082px;
+			height: 602px;
+			float: left;
+			/*background-color: skyblue;*/
+			position: absolute;
+			left: 284px;
+			top: 398px;
+		}
+		.main_pinpai_xbottom_shang{
+			width: 1082px;
+			height: 400px;
+			/*background-color: green;*/
+		}
+		.main_pinpai_xbottom_xia{
+			width: 1082px;
+			height: 202px;
+			/*background-color: blue;*/
+		}
+		.main_pinpai_item4{
+			width: 596px;
+			height: 400px;
+			float: left;
+		}
+		.main_pinpai_item4 img{
+			width: 600px;
+			height: 400px;
+		}
+		.main_pinpai_item5{
+			width: 482px;
+			height: 400px;
+			float: left;
+			background-color: #F5C813; 
+		}
+		.main_pinpai_item5_left{
+			width: 364px;
+			height: 341px;
+			float: left;
+			/*background-color: red;*/
+			position: relative;
+		}
+		.main_pinpai_item5_right{
+			width: 88px;
+			height: 400px;
+			float: left;
+			margin-left: 30px;
+			/*background-color: pink;*/
+		}
+		.main_pinpai_item5_right img{
+			width: 88px;
+			height: 400px;
+		}
+		.main_pinpai_item5_left h1{
+			font-size: 28px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-top: 85px;
+			margin-left: 50px;
+			float: right;
+		}
+		.main_pinpai_item5_left p{
+			font-size: 14px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			margin-left: 50px;
+			float: right;
+		}
+		.main_pinpai_item5_left span{
+			font-size: 14px;
+			color: #fff;
+			font-family: "微软雅黑";
+			font-weight: bold;
+			margin-left: 50px;
+			display: block;
+			float: right;
+		}
+		.main_pinpai_boxs2{
+			/*float: right;*/
+			width: 131px;
+			height: 31px;
+			bottom: 0px;
+			right: 0;
+			/*background-color: pink;*/
+			position: absolute;
+		}
+		.main_pinpai_xbottom_xia{
+			width: 958px;
+			height: 187px;
+			margin-left: 12px;
+			margin-top: 15px;
+			/*background-color: pink;*/
+		}
+		.main_xbottom_xia_item{
+			width: 233px;
+			height: 187px;
+			margin-right: 10px;
+			float: left;
+		}
+		.main_xbottom_xia_item img{
+			width: 233px;
+			height: 187px;
+		}
+		.main_xbottom_xia_item2{
+			width: 229px;
+			height: 187px;
+			text-align: center;
+			background-color: #497389;
+			float: left;
+		}
+		.main_xbottom_xia_item2 p{
+			font-size: 24px;
+			color: #fff;
+			font-family: "ARIAL";
+			line-height: 187px;
+		}
+		.main_zeren{
+			width: 1366px;
+			height: 557px;
+			/*background-color: green;*/
+			padding-top: 66px; 
+			position: relative;
+			margin: 0 auto;
+		}
+		.main_title2{
+			width: 1366px;
+			height: 98px;
+			right: 10px;
+			position: absolute;
+		}
+		.main_title2 img{
+			width: 279px;
+			height: 98px;
+			display: block;
+			margin: 0 auto;
+		}
+		.main_zeren_item{
+			width: 995px;
+			height: 323px;
+			position: absolute;
+			top: 234px;
+			/*background-color: blue;*/
+			left: 172px;
+		}
+		.main_zeren_item_zuo{
+			width: 515px;
+			height: 323px;
+			float: left;
+		}
+		.main_zeren_item_zuo img{
+			width: 515px;
+			height: 323px;
+		}
+		.main_zeren_item_you{
+			width: 390px;
+			height: 323px;
+			float: left;
+			margin-left: 90px;
+			/*background-color: white;*/
+		}
+		.main_zeren_item_you h1{
+			font-size: 16px;
+			color: #000;
+			font-family: "ARIAL";
+			font-style: italic;
+			margin-left: 40px;
+		}
+		.main_zeren_item_you h2{
+			font-size: 106px;
+			color: #000;
+			font-family: "ARIAL";
+			font-style: italic;
+			float: left;
+		}
+		.main_zeren_item_you h3{
+			font-size: 55px;
+			color: #000;
+			font-family: "ARIAL";
+			font-style: italic;
+			float: left;
+			margin-top: 20px;
+		}
+		.main_zeren_item_zhong{
+			width: 340px;
+			height: 124px;
+			margin-left: 37px;
+			margin-top: 114px;
+			/*background-color: yellow;*/
+		}
+		.main_zeren_item_zhong p{
+			font-size: 24px;
+			color: #727272;
+			font-family: "微软雅黑";
+			font-style: italic;
+		}
+		.main_zeren_item_xia{
+			margin-top: 36px;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="yiju_header">
+		<div class="header_left">
+			<img src="imgs/index/logo.png" alt="">
+			<div class="header_left_zi">
+				<p>宜居时代</p>
+			</div>
+		</div>
+		<div class="header_right">
+			<a href="index.html">公司首页</a>
+			<a href="livable home.html">公司简介</a>
+			<a href="product.html">产品中心</a>
+			<a href="case show.html">案例展示</a>
+			<a href="team.html">团队介绍</a>
+			<div class="header_right_tiao header_right_tiao17"></div>
+			<div class="header_right_tiao2 header_right_tiao17"></div>
+			<h1><a href="about.html">关于我们</a></h1>
+			<div class="header_right_tiao3 header_right_tiao18"></div>
+			<div class="header_right_tiao4 header_right_tiao19"></div>
+			<div class="header_right_search">
+				<input type="text">
+				<input type="submit" value="&#xe633;" class="sousuo">
+			</div>
+		</div>
+	</div>
+
+	<div class="banner">
+		<img src="imgs/about/banner.png" alt="">
+		<div class="mianbao">
+			<div class="mianbao_box">
+				<div class="mianbao_box_daohang">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>首页</h1>
+						<h2>HOME</h2>
+					</div>
+				</div>
+				<div class="mianbao_lunbo"></div>
+				<div class="mianbao_lunbo mianbao_lunbo2"></div>
+				<div class="mianbao_lunbo mianbao_lunbo3"></div>
+				<div class="mianbao_box_daohang mianbao_box_daohang2">
+					<div class="mianbao_daohang_left"></div>
+					<div class="mianbao_daohang_right">
+						<h1>关于我们</h1>
+						<h2>ABOUT US</h2>
+					</div>
+				</div>	
+			</div>
+			<div class="mianbao_box2"></div>
+		</div>
+		<div class="bangongyi">
+			<img src="imgs/product/mianbao.png" alt="">
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="main_cuture">
+			<div class="main_title">
+				<img src="imgs/about/title1.png" alt="">
+			</div>
+			<div class="main_cuture_item">
+				<div class="main_cuture_item_zuo">
+					<img src="imgs/about/1.png" alt="">
+				</div>
+				<div class="main_cuture_item_zhong">
+					<h1>INNOVATION AND ENTREPRENEURSHIP</h1>
+					<h2>INDUSTRY PAPK。</h2>
+					<div class="main_caitiao">
+						<div class="main_caitiao_left"></div>
+						<div class="main_caitiao_right"></div>
+					</div>
+					<h3>构建智慧产业园区,创新经营理念</h3>
+					<span>Construction of intelligent industrial park, </span>
+					<span>to build the overall brand competitiveness of the park</span>
+					<p class="main_cuture_wenzi">“顾客是企业之本，创新是发展之魂</p>
+					<p>创新是任何企业发展的不竭动力。只有永远引领市场、优于市场消费要求，才能在获得消费者的满意度和忠诚度，塑造企业优势品牌。</p>
+					<p>乐于创新、现代时尚，这正是红星美凯龙品牌的理念内涵。</p>
+					<p>宜居时代始终相信，理念引导行业，模式创造未来，为此，红星美凯龙坚持以市场为导向、以品质为基础、以人才为根本、以创新为动力为企业宗旨，旨在从产品根本上提升品牌价值和推进宜居时代品牌化进程的层面来进行对全国市场的开发。</p>
+					<div class="main_cuture_more">
+						<div class="main_cuture_more_left">
+							<p>MORE</p>
+						</div>
+						<div class="main_cuture_more_right">
+							<div class="main_cuture_more_shizi"></div>
+							<div class="main_cuture_more_shizi2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main_cuture_item_you">
+					<div class="main_bian_shang"></div>
+					<div class="main_bian_zuo"></div>
+					<img src="imgs/about/2.png" alt="">
+				</div>	
+			</div>
+		</div>
+		<div class="main_hangye">
+			<div class="main_title">
+				<img src="imgs/about/title1.png" alt="">
+			</div>
+			<div class="main_hangye_top">
+				<div class="main_hangye_left"></div>
+				<div class="main_hangye_xia"></div>
+				<div class="main_hangye_box">
+					<div class="main_hangye_box_left">
+						<h1>TODAY'S </h1>
+					    <h2>NEWS°</h2>
+						<p>特级工业设计师杨小雨先生</p>
+						<span>莅临公司指导工作</span>
+					</div>
+					<div class="main_hangye_box_right">
+						<img src="imgs/about/3.png" alt="">
+					</div>
+				</div>
+				<div class="main_hangye_top_new">
+					<h3>NEW</h3>
+				</div>
+			</div>
+			<div class="main_hangye_bottom">
+				<div class="main_hangye_bottom_item">
+					<div class="main_hangye_bottom_left">
+						<div class="main_cuture_more_left">
+							<p>MORE</p>
+						</div>
+						<div class="main_cuture_more_right">
+							<div class="main_cuture_more_shizi"></div>
+							<div class="main_cuture_more_shizi2"></div>
+						</div>
+					</div>
+					<div class="main_hangye_bottom_right">
+						<p>隆重揭晓智慧园区“最美前台”评选活动</p>
+						<span>宜居时代举办的智慧园区“最美前台”活动受到各园区企业的积极参与和踊跃报名，众多优秀的企业都希望通过这次活动大展风采，摘取桂冠。</span>
+						<div class="main_bottom_right_xia">
+							<p>隆重揭晓智慧园区“最美前台”评选活动</p>
+							<span>宜居时代举办的智慧园区“最美前台”活动受到各园区企业的积极参与和踊跃报名，众多优秀的企业都希望通过这次活动大展风采，摘取桂冠。</span>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="main_pinpai">
+			<div class="main_title">
+				<img src="imgs/about/title3.png" alt="">
+			</div>
+			<div class="main_pinpai_bottom">
+				<div class="main_pinpai_bottom_shang">
+					<div class="main_pinpai_item">
+						<img src="imgs/about/5.png" alt="">
+					</div>
+					<div class="main_pinpai_item main_pinpai_item2">
+						<img src="imgs/about/13.png" alt="">
+						<div class="main_pinpai_meng">
+							<h1>宜居手工创意坊</h1>
+							<p class="main_pinpai_meng_zi">专业设计室内loft工业设计</p>
+							<p>空间设计自主研发品牌</p>
+							<span class="main_pinpai_meng_zi2">推广时间：2017-05-08</span>
+							<span>推广区域：东区306-311</span>
+							<div class="main_pinpai_boxs">
+								<div class="main_cuture_more_left">
+									<p>MORE</p>
+								</div>
+								<div class="main_cuture_more_right">
+									<div class="main_cuture_more_shizi"></div>
+									<div class="main_cuture_more_shizi2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main_pinpai_itemsp">
+						<img src="imgs/about/6.png" alt="">
+					</div>
+				</div>
+				<div class="main_pinpai_item3">
+					<img src="imgs/about/7.png" alt="">
+				</div>
+				<div class="main_pinpai_xbottom">
+					<div class="main_pinpai_xbottom_shang">
+						<div class="main_pinpai_item4">
+					 		<img src="imgs/about/8.png" alt="">
+						</div>
+						<div class="main_pinpai_item5">
+							<div class="main_pinpai_item5_left">
+								<h1>宜居手工创意坊</h1>
+								<p class="main_pinpai_meng_zi">专业设计室内loft工业设计</p>
+								<p>空间设计自主研发品牌</p>
+								<span class="main_pinpai_meng_zi2">推广时间：2017-05-08</span>
+								<span>推广区域：东区306-311</span>
+								<div class="main_pinpai_boxs2">
+									<div class="main_cuture_more_left">
+										<p>MORE</p>
+									</div>
+									<div class="main_cuture_more_right">
+										<div class="main_cuture_more_shizi"></div>
+										<div class="main_cuture_more_shizi2"></div>
+									</div>
+								</div>
+							</div>
+							<div class="main_pinpai_item5_right">
+								<img src="imgs/about/14.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="main_pinpai_xbottom_xia">
+						<div class="main_xbottom_xia_item">
+							<img src="imgs/about/9.png" alt="">
+						</div>
+						<div class="main_xbottom_xia_item">
+							<img src="imgs/about/10.png" alt="">
+						</div>
+						<div class="main_xbottom_xia_item">
+							<img src="imgs/about/11.png" alt="">
+						</div>
+						<div class="main_xbottom_xia_item2">
+							<p>MORE</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_zeren">
+			<div class="main_title2">
+				<img src="imgs/about/title4.png" alt="">
+			</div>
+			<div class="main_zeren_item">
+				<div class="main_zeren_item_zuo">
+					<img src="imgs/about/12.png" alt="">
+				</div>
+				<div class="main_zeren_item_you">
+					<h1>SOCIAL RESPONSIBILITY</h1>
+					<h2>F</h2>
+					<h3>OR FUTURE</h3>
+					<div class="main_zeren_item_zhong">
+						<p>行动是最好的施爱语言，</p>
+						<p>“爱家”是宜居时代的信念，</p>
+						<p>知行合一，仁爱致远。</p>
+						<p>因为关爱生命，所以心系天下。</p>
+					</div>
+					<div class="main_zeren_item_xia">
+						<div class="main_cuture_more_left">
+							<p>MORE</p>
+						</div>
+						<div class="main_cuture_more_right">
+							<div class="main_cuture_more_shizi"></div>
+							<div class="main_cuture_more_shizi2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer_shang">
+			<div class="footer_dingwei">
+				<p>工作室地址ADDRESS</p>
+				<span>山西省太原市小店区平阳路220号</span>
+			</div>
+			<div class="footer_shang_bottom">
+				<div class="footer_bottom_left">
+					<div class="footer_box">
+						<h1>姓名</h1>
+					</div>
+					<div class="footer_box footer_box2">
+						<h1>邮箱</h1>
+					</div>
+					<div class="footer_box3">
+						<h2>您的留言。。。</h2>
+						<div class="footer_box3_pic">
+							<div class="footer_box3_left">
+								<span>SEND</span>
+							</div>
+							<div class="case_kuang_fangkuai">
+								<div class="case_kuang_shizi"></div>
+								<div class="case_kuang_shizi2"></div>
+							</div>	
+						</div>
+						
+					</div>	
+				</div>
+				<div class="footer_bottom_right">
+					<div class="footer_wen1">
+						<p>更多内容请查看</p>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen1_xia">
+							<h1>家居资质</h1>
+							<h1>新闻中心</h1>
+							<h1 class="footer_wen1_special">品牌印象</h1>
+							<h1>公司印象</h1>
+							<h1>企业新闻</h1>
+							<h1 class="footer_wen1_special">家居生活</h1>
+							<h1>合作关系</h1>
+							<h1>行业新闻</h1>
+							<h1 class="footer_wen1_special">企业影像</h1>
+							<h1>商务运营</h1>
+							<h1>区域活动</h1>
+							<h1 class="footer_wen1_special">家居精品</h1>
+						</div>
+					</div>
+					<div class="footer_wen2">
+						<h1>媒体运营号</h1>
+						<span>MORE NEIRONG PLEASE</span>
+						<div class="footer_wen2_box">
+							<img src="imgs/index/z1.png" alt="">
+							<img src="imgs/index/z2.png" alt="">
+							<img src="imgs/index/z3.png" alt="" class="footer_box_special">
+						</div>
+						<p>关注公众平台／可获取更多咨询以及商务活动机会</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="footer_xia">
+			<p>京ICP备11017824号-4 京ICP证130164号北京市公安局朝阳分局备案编号:11010502000501</p>
+			<p>网络文化经营许可证京网文[2016]6173-844号广播电视节目制作经营许可证 （京）字第06990号</p>
+		</div>
+	</div>
+</body>
+</html>		
